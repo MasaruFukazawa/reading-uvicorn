@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  sphinx-docs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: reading-uvicorn
+    ports:
+      - "9001:9001"
+    volumes:
+      - ./source:/docs/source
+      - ./build:/docs/build
+      - ./Makefile:/docs/Makefile
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
