@@ -57,3 +57,12 @@ asyncioを読む
    :caption: Contents:
 
    asyncio/index
+
+
+ライセンス
+===========================
+
+.. toctree::
+   :maxdepth: 1
+
+   license
