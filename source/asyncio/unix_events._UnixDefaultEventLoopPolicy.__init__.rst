@@ -4,6 +4,8 @@ unix_events._UnixDefaultEventLoopPolicy.__init__
 実装
 ---------------------------
 
+**asyncio.unix_events._UnixDefaultEventLoopPolicy**
+
 .. code-block:: python
 
     class _UnixDefaultEventLoopPolicy(events.BaseDefaultEventLoopPolicy):
@@ -16,25 +18,10 @@ unix_events._UnixDefaultEventLoopPolicy.__init__
     
     DefaultEventLoopPolicy = _UnixDefaultEventLoopPolicy
 
-
-引数
----------------------------
-
-- なし
-
-戻り値
----------------------------
-
-- イベントループポリシー
-
-内容
----------------------------
-
-- 
-- 
-
 継承元
 ---------------------------
+
+**asyncio.events.BaseDefaultEventLoopPolicy**
 
 .. code-block:: python
 
@@ -61,10 +48,29 @@ unix_events._UnixDefaultEventLoopPolicy.__init__
             self._local = self._Local()
 
         #
-        # つづくよ
+        # 必要そうな部分だけ
         #
+
+
+引数
+---------------------------
+
+- なし
+
+戻り値
+---------------------------
+
+- なし
+
+内容
+---------------------------
+
+- threading.local を継承した _Local クラスを呼び出す
+
+    - 
 
 .. toctree::
    :maxdepth: 1
    :caption: 呼び出し関数:
 
+    

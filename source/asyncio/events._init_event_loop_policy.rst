@@ -4,6 +4,8 @@ events._init_event_loop_policy
 実装
 ---------------------------
 
+**asyncio.events._init_event_loop_policy**
+
 .. code-block:: python
 
     def _init_event_loop_policy():
@@ -12,6 +14,19 @@ events._init_event_loop_policy
             if _event_loop_policy is None:  # pragma: no branch
                 from . import DefaultEventLoopPolicy
                 _event_loop_policy = DefaultEventLoopPolicy()
+
+
+**asyncio.__init__**
+
+.. code-block:: python
+
+    if sys.platform == 'win32':  # pragma: no cover
+        from .windows_events import *
+        __all__ += windows_events.__all__
+    else:
+        from .unix_events import *  # pragma: no cover
+        __all__ += unix_events.__all__
+
 
 引数
 ---------------------------
@@ -26,8 +41,7 @@ events._init_event_loop_policy
 内容
 ---------------------------
 
-- Windows 以外の場合、 **from .unix_events import *** する
-- 
+
 
 .. toctree::
    :maxdepth: 1

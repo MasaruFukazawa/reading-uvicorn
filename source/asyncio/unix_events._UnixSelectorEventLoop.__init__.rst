@@ -84,37 +84,6 @@ unix_events._UnixSelectorEventLoop.__init__
 - 
 - 
 
-継承元
----------------------------
-
-.. code-block:: python
-
-    class BaseDefaultEventLoopPolicy(AbstractEventLoopPolicy):
-        """Default policy implementation for accessing the event loop.
-
-        In this policy, each thread has its own event loop.  However, we
-        only automatically create an event loop by default for the main
-        thread; other threads by default have no event loop.
-
-        Other policies may have different rules (e.g. a single global
-        event loop, or automatically creating an event loop per thread, or
-        using some other notion of context to which an event loop is
-        associated).
-        """
-
-        _loop_factory = None
-
-        class _Local(threading.local):
-            _loop = None
-            _set_called = False
-
-        def __init__(self):
-            self._local = self._Local()
-
-        #
-        # つづくよ
-        #
-
 .. toctree::
    :maxdepth: 1
    :caption: 呼び出し関数:
