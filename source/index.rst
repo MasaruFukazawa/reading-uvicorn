@@ -42,11 +42,13 @@ uvicornを読む
       Server->>Server: self.shutdown(sockets=sockets)
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
-   config/index
-   server/index
+   uvicorn/__init__.py
+   uvicorn/run
+   uvicorn/config/index
+   uvicorn/server/index
 
 
 asyncioを読む
