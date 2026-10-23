@@ -18,7 +18,13 @@
      - CPython の asyncio（https://github.com/python/cpython）
      - Python Software Foundation License Version 2
 
-このサイトの解説文の著作権は MasaruFukazawa に帰属します。
+このサイトの解説文と図（シーケンス図など）は MasaruFukazawa が著作権を持ち、
+`クリエイティブ・コモンズ 表示 4.0 国際 ライセンス（CC BY 4.0） <https://creativecommons.org/licenses/by/4.0/deed.ja>`_
+の下で公開しています。
+作者名（MasaruFukazawa）を表示すれば、複製・改変・商用利用を含めて自由に使えます。
+
+掲載しているソースコードは CC BY 4.0 の対象外です。
+ソースコードには、上の表に示した元のライセンスが適用されます。
 
 uvicorn
 ---------------------------
